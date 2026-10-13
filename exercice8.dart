@@ -29,3 +29,14 @@ void main() {
   print('Pages du premier livre : ${livre1.pages}');
   Livre.afficherTotalLivres();
 }
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  @override
+  void afficherInfos() {
+    super.afficherInfos();
+    print('Genre: $genre');
+  }
+}
