@@ -19,16 +19,6 @@ class Livre {
   }
 }
 
-void main() {
-  var livre1 = Livre('Le Petit Prince', 'Antoine de Saint-Exupéry', 200);
-  var livre2 = Livre('Les Misérables', 'Victor Hugo');
-
-  livre1.afficherInfos();
-  livre2.afficherInfos();
-
-  print('Pages du premier livre : ${livre1.pages}');
-  Livre.afficherTotalLivres();
-}
 class Roman extends Livre {
   String genre;
 
@@ -39,4 +29,21 @@ class Roman extends Livre {
     super.afficherInfos();
     print('Genre: $genre');
   }
+}
+
+void main() {
+  var livre1 = Livre('Le Petit Prince', 'Antoine de Saint-Exupéry', 200);
+  var livre2 = Livre('Les Misérables', 'Victor Hugo');
+
+  livre1.afficherInfos();
+  livre2.afficherInfos();
+  print('Pages du premier livre : ${livre1.pages}');
+
+  var roman1 = Roman("Le Crime de l'Orient-Express", 'Agatha Christie', 'Policier');
+  var roman2 = Roman('Dune', 'Frank Herbert', 'Science-fiction');
+
+  roman1.afficherInfos();
+  roman2.afficherInfos();
+
+  Livre.afficherTotalLivres();
 }
