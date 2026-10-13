@@ -12,3 +12,8 @@ class Compte {
     }
   }
 }
+void main() {
+  var compte = Compte('123456');
+  compte.depot(150);
+  print(compte.solde);
+}
