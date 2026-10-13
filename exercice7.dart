@@ -6,3 +6,10 @@ class Tache {
     nombreTotal++;
   }
 }
+void main() {
+  Tache('Réviser Dart');
+  Tache('Faire les exercices');
+  Tache('Envoyer le travail sur GitHub');
+
+  print(Tache.nombreTotal);
+}
